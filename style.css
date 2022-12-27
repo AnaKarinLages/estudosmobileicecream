@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-header: 'Staatliches', sans-serif;
+  --ff-p: 'Palanquin', sans-serif;
+
+  --fc-h: hsl(0, 0%, 100%);
+  --fc-b:hsla(233, 100%, 97%, 1);
+
+  --fc-botao: hsla(312, 91%, 96%, 1);
+
+
+  --fc-p:hsl(274, 84%, 12%);
+
+  --fc-span: hsla(232, 17%, 35%, 1);
+
+  --font-size: 65.5%;
+  --fs-body:1.6rem;
+}
+
+.page {
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
+ 
+ 
+}
+
+body{
+  background: var(--fc-b);
+  font-size: var(--fs-body);
+  display: flex;
+  align-items: center;
+}
+ main {
+  display: grid;
+  gap: 3.0rem;
+ }
+
+header {
+  
+ position: relative;
+  background: #8E9AAF;
+  
+  letter-spacing: 0.05em;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 22.0rem;
+
+  border-radius: 1.0rem;
+
+  transition: transform 200ms;
+  transform: scale(1.1);
+ 
+}
+
+header  h1 {
+  font-family: var(--ff-header);
+
+  color: var(--fc-h);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  align-items: center;
+ 
+  display: flex;
+  flex-direction: column;
+  background: hsla(275, 18%, 79%, 1);
+  width: 100%;
+
+  box-shadow: 0px 2px 2px 0px hsla(0, 0%, 0%, 0.25);
+
+}
+
+.logo {
+  margin-top: 3.2rem;
+  margin-bottom: 3.2rem;
+  width: 12.0rem;
+  
+  filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.25));
+
+}
+
+.text {
+  font-family: var(--ff-p);
+  color:var(--fc-p);
+  
+  display: flex;
+  align-items: center;
+  text-align: center;
+  line-height: 1.5rem;
+  font-weight: 400;
+  font-size: 2.0rem;
+  
+  
+  margin-top: 4.0rem;
+
+  width: 30.5rem;
+  height: 7.5rem;
+
+}
+
+.card {
+  position: relative;
+  
+}
+
+
+ .card p span {
+  position: absolute;
+  border-radius: 2.0rem;
+
+  top: 2.0rem;
+  right: 1.6rem;
+
+  background: hsla(312, 91%, 96%, 1);
+  
+  font-size: 2.0rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: var(--ff-header);
+  letter-spacing: 0.05em;
+
+  color: var(--fc-span);
+
+  width: 11.0rem;
+  height: 3.0rem;
+
+  display: inline-flex;
+  align-items: center;
+
+ padding: 2.3rem 2.4rem;
+}
+
+.card img {
+  object-fit: cover;
+  border-radius: 2.0rem;
+  transition: transform 200ms;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+}
+
+header {
+  animation-name: topdown;
+  animation-duration: 20ms;
+  animation-play-state: paused;
+}
+
+header:hover {
+  animation-play-state: running;
+}
+  
+
+@keyframes topdown {
+
+  0%{
+    opacity: 50%;
+    transform: translateZ(10%)
+  }
+
+
+  100%{
+    opacity: 10;
+    transform: translateY(15);
+  }
+}
